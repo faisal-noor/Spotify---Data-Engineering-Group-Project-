@@ -1,0 +1,21 @@
+# !pip install spotipy
+# import spotipy
+# from spotipy.oauth2 import SpotifyClientCredentials
+
+
+client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)
+sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+
+
+def get_top_tracks(name):
+    result = sp.search(name) 
+    artist_uri = result['tracks']['items'][0]['artists'][0]['uri']
+    results = sp.artist_top_tracks(artist_uri)
+    for track in results['tracks'][:10]:
+        print('track    : ' + track['name']) #name of track
+        print('audio    : ' + track['preview_url']) #30sec audio
+        print('cover art: ' + track['album']['images'][0]['url']) #cover image
+        print()
+        
+# example      
+get_top_tracks("{Coldplay}")
