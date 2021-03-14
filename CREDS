@@ -1,0 +1,15 @@
+# uploaded in S3 with the actual creds
+
+credentials = {
+	"aws_access_key_id" : "...",
+	"aws_secret_access_key" : "...",
+	"postgres_host" : "depgdb.c50u4bslwwg0.eu-west-2.rds.amazonaws.com",
+	"postgres_database_name" : "thyrsosmakloklas20",
+	"user" = "thyrsosmakloklas20",
+  	"password" = "qwerty123",
+ 	"spotify_client_id" : "...",
+  	"spotify_client_secret" : "...",
+  	"genius" : "...",
+  	"aws_conn_id" : "aws_default_spotify",
+  	"postgres_conn_id" : "postgres_conn_id_spotify"
+}
