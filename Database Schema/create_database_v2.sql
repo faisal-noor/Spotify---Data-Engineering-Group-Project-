@@ -1,3 +1,6 @@
+CREATE SCHEMA IF NOT EXISTS spotify;
+
+DROP TABLE IF EXISTS spotify.artists;
 CREATE TABLE IF NOT EXISTS spotify.artists (
     artist_id     varchar(256) primary key,
     artist_name   varchar(256),
